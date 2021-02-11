@@ -1,2 +1,2 @@
-# jackbrower.github.io
-Live hosts of projects.
+# brower.xyz
+Portfolio, including deployed projects.
