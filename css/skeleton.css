@@ -259,8 +259,7 @@ label > .label-body {
   font-weight: normal; }
 
 
-/* Lists
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Lists */
 ul {
   list-style: circle inside; }
 ol {
