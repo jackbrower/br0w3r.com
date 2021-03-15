@@ -32,6 +32,18 @@
          padding:5px;
          font-size:30px;
       }
+      h1 {
+         text-align:center;
+         display: grid;
+         grid-template-columns: 1fr auto 1fr;
+         grid-template-rows: 20px 0;
+         grid-gap: 20px;
+      }
+      h1:after,h1:before {
+         content: " ";
+         display: block;
+         border-bottom: dashed 1px rgba(219, 219, 219, 0.9);
+      }
       .grid {
          display: flex;
          align-items: center;
@@ -66,11 +78,11 @@
     </div>
 </div>
 
-<div id="header"><span>Pretty Chess Analysis</span></div>
+<div id="header"><span>anonmail</span></div>
 <div class="grid">
     <div class="col-1-2">
        <div class="content">
-           <p style="padding:0px 20px 0px 0px; text-align:justify;">A front end to the chess engine Stockfish, inspired by the simple and beginner-friendly analysis interface on chess.com. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+           <p style="padding:0px 20px 0px 0px; text-align:justify;">Anonymous and disposable email service. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
        </div>
     </div>
     <div class="col-1-2">
@@ -93,6 +105,38 @@
        </div>
     </div>
 </div>
+
+<!-- <br>
+<div id="header"><h1>mini-projects</h1></div>
+<br> 
+
+<div id="header"><span>youtube downloader</span></div>
+<div class="grid">
+    <div class="col-1-2">
+       <div class="content">
+           <p style="padding:0px 20px 0px 0px; text-align:justify;">An online video downloader. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+       </div>
+    </div>
+    <div class="col-1-2">
+       <div class="content">
+           <p><img src="assets/placeholder.jpeg"></p>
+       </div>
+    </div>
+</div>
+
+<div id="header"><span>bloatlessrecipes.com</span></div>
+<div class="grid">
+    <div class="col-1-2">
+       <div class="content">
+           <p style="padding:0px 20px 0px 0px; text-align:justify;">A simple cooking site populated with recipes scraped from cooking blogs. A program written in Python pulls URLs from user input and then generates a content-only Markdown file to certain specifications, which is then processed using a small shell script static site generator.</p>
+       </div>
+    </div>
+    <div class="col-1-2">
+       <div class="content">
+           <p><img src="assets/placeholder.jpeg"></p>
+       </div>
+    </div>
+</div> -->
 
 
 
