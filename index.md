@@ -1,8 +1,8 @@
 ---
 layout: page
-permalink: /
-permalink_name: /home
-title: home
+permalink: /index
+permalink_name: /index
+title: index
 
 detail_image: assets/logo.png
 
