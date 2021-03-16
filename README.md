@@ -7,8 +7,8 @@ Right now I have none of my real projects public, so there are just some filler 
 Heavily WIP.
 
 ## TODO
-Fix mobile image formatting
-Adjust index
-Wrap up resume and embed
-Adjust contact
+* Fix mobile image formatting
+* Adjust index
+* Wrap up resume and embed
+* Adjust contact
 
