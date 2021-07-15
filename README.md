@@ -9,6 +9,5 @@ Heavily WIP.
 ## TODO
 * Fix mobile image formatting
 * Adjust index
-* Wrap up resume and embed
 * Adjust contact
 
