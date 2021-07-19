@@ -1,13 +1,3 @@
-## brower.xyz
+## brower.xyz, new boilerplate branch
 
-My portfolio, showcasing all of my projects. Source code can be found here, on GitHub. Links to their live hosts can be found in the Projects section of my portfolio or in the project's respective repo.
-
-Right now I have none of my real projects public, so there are just some filler placeholder examples so I can preview the formatting.
-
-Heavily WIP.
-
-## TODO
-* Fix mobile image formatting
-* Adjust index
-* Adjust contact
-
+This is a branch of my main site, brower.xyz, which is testing a new boilierplate called MinWiz (https://minwiz.com/). It is significantly more lightweight than the main site, which was generated with Jekyll.
