@@ -1,3 +1,4 @@
-## brower.xyz, new boilerplate branch
+## brower.xyx
 
-This is a branch of my main site, brower.xyz, which is testing a new boilierplate called MinWiz (https://minwiz.com/). It is significantly more lightweight than the main site, which was generated with Jekyll.
+A host for all my projects.
+This site was developed to be very minimal, see the home page.
