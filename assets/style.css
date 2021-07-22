@@ -11,3 +11,30 @@ body {
 a {
   color: rgb(134, 199, 253);
 }
+a h1 {
+  color: #fff;
+  text-decoration: none;
+}
+@media (min-width: 569px) {
+  .hidden {
+    display: none !important;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+  }
+  nav a {
+    margin-left: 1rem;
+  }
+}
+body header {
+  line-height: 0.5rem !important;
+}
+nav {
+  display: block;
+}
+nav a {
+  margin-right: 1rem;
+}
