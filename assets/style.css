@@ -8,6 +8,17 @@ body {
   padding: 0 1em;
   font-size:18px;
 }
+h2 {
+  line-height: 0;
+  margin-top: 2rem;
+}
+h2 span {
+  display: inline-block;
+}
+h3 {
+  padding: 0;
+  margin-bottom: 0;
+}
 section, section:target~section:last-of-type {
   display: none;
 }
@@ -34,6 +45,23 @@ a h1 {
   nav a {
     margin-left: 1rem;
   }
+  .grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .col-1-2 {
+    flex: 1;
+  }
+  .cole-1-2:last-child {
+    margin-left: 20px;
+  }
+  img{
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    vertical-align: middle;
+  }
 }
 body header {
   line-height: 0.5rem !important;
@@ -44,3 +72,8 @@ nav {
 nav a {
   margin-right: 1rem;
 }
+img {
+  width: 100%;
+  height: auto;
+}
+
