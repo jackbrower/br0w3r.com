@@ -1,139 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <title>brower.xyz
-  </title>
-  <meta content="brower.xyz" property="og:title">
-  <meta content="Jack Brower's portfolio." name="description">
-  <meta content="Jack Brower's portfolio." property="og:description">
-  <meta content="public/og.png" property="og:image">
-  <meta content="summary" name="twitter:card">
-  <style>
-    * {
-      --tc: #fff;
-      --bc: #111;
-      --hc: rgb(60, 197, 60)
-    }
-
-    body {
-      font: 18px/1.4 -apple-system, BlinkMacSystemFont, sans-serif;
-      color: var(--tc);
-      background: var(--bc);
-      max-width: 36em;
-      margin: 0 auto;
-      padding: 0 .7em;
-      text-align: justify
-    }
-
-    main {
-      margin-bottom: 3em
-    }
-
-    a {
-      text-decoration: none;
-      color: var(--hc)
-    }
-
-    a:hover {
-      text-decoration: underline
-    }
-
-    br,
-    h1,
-    h2,
-    header,
-    ul {
-      margin-bottom: 1em
-    }
-
-    ul {
-      padding-left: 1em
-    }
-
-    br {
-      content: " ";
-      display: block
-    }
-
-    section,
-    section:target~section:last-of-type {
-      display: none
-    }
-
-    section:last-of-type,
-    section:target {
-      display: inherit
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center
-    }
-
-    header>a {
-      font-size: 1.7em;
-      font-weight: 700
-    }
-
-    nav a {
-      margin-left: .75em
-    }
-  </style>
-  <link rel="canonical" href="https://brower.xyz/">
-</head>
-
-<body>
-  <header>
-    <a href="#h">brower.xyz
-    </a>
-    <nav>
-      <a href="#p">Projects
-      </a>
-      <a href="#r">Resume
-      </a>
-      <a href="#c">Contact
-      </a>
-    </nav>
-  </header>
-  <main>
-    <section id="p">
-      <h2>Projects
-      </h2>
-    </section>
-    <section id="r">
-      <h2>Resume
-      </h2>
-      <iframe src="resume.pdf#toolbar=0" width="100%" height="910px">
-      </iframe>
-      <br>For ease of access, I've embedded my resume into the page. If you would like to download the PDF, right click
-      the resume.
-    </section>
-    <section id="c">
-      <h2>Contact info
-      </h2>
-    </section>
-    <section id="h">
-      <h1>Jack Brower's portfolio
-      </h1>Hi! I'm Jack Brower, a Computer Science student at FSU. This page is a short about me, and in the nav bar
-      above you can find a few of my larger public projects, a copy of my resume, and my contact info. Below you can
-      also find my GitHub, which contains just about everything I've worked on.
-      <br>This site was designed to be as lightweight as possible, while still maintaining the aesthetics of a modern
-      website. The stylesheet is based on the MinWiz project, which can be found
-      <a target="_blank" rel="noopener" href="https://github.com/zeplia/minwiz">here
-      </a>.
-      <br>Here is my
-      <a target="_blank" rel="noopener" href="https://github.com/jackbrower">GitHub
-      </a>, which I use to host most of my projects.
-      <br>Occasionally I'll also use
-      <a target="_blank" rel="noopener" href="https://gitlab.com/jackbrower">GitLab
-      </a> for issue submissions and pull requests.
-    </section>
-  </main>
-  <footer>
-  </footer>
-</body>
-
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+    <link rel="canonical" href="https://brower.xyz/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://brower.xyz">
+    <meta property="og:title" content="brower.xyz">
+    <meta property="og:site_name" content="brower.xyz">
+    <meta property="og:image" content="./assets/logo.png">
+    <meta name="description" content="Jack Brower's portfolio">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <meta name="google-site-verification" content="">
+  </head>
+  <body>
+    <h1>brower.xyz 🫑</h1>
+    <p>
+      Hi! 👋 I'm Jack Brower, a Computer Science student at FSU. 
+    </p>
+    <p>
+      This page is a short about me, and in the nav bar above you can find a few of my larger public projects, a copy of my resume, and my contact info. Below you can also find my GitHub, which contains just about everything I've worked on.
+    </p>
+    <p>
+      This site was designed to be as lightweight and effiecent as possible, while still maintaining the aesthetics, accessability, and search engine optimization of a modern website. To do this, all aspects of the page were minified, and all images were compressed.
+    </p>
+    <p>
+      This website, along with all of my other work, can be found on <a target="_blank" rel="noopener" href="https://github.com/jackbrower">GitHub</a>.
+    </p>
+    <p>
+      I also occasionally use <a target="_blank" rel="noopener" href="https://gitlab.com/jackbrower">GitLab</a> for PRs and issue reports.
+    </p>
+  </body>
 </html>
