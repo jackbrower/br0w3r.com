@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="./assets/style.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="canonical" href="https://brower.xyz/">
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
@@ -13,7 +14,6 @@
     <meta property="og:image" content="./assets/logo.png">
     <meta name="description" content="Jack Brower's portfolio">
     <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
-    <meta name="google-site-verification" content="">
   </head>
   <body>
     <header>
@@ -34,7 +34,7 @@
         This page is a short about me, and in the nav bar above you can find a few of my larger public projects, a copy of my resume, and my contact info. Below you can also find my GitHub, which contains just about everything I've worked on.
       </p>
       <p>
-        This site was designed to be as lightweight and effiecent as possible, while still maintaining the aesthetics, accessability, and search engine optimization of a modern website. To do this, all aspects of the page were minified, and all images were compressed.
+        This site was designed to be as lightweight and effiecent as possible, while still maintaining the aesthetics, accessability, and search engine optimization of a modern website. Nothing was minified, though images were compressed. This page also has zero JavaScript. Everything here was done with pure HTML and CSS.
       </p>
       <p>
         This website, along with all of my other work, can be found on <a target="_blank" rel="noopener" href="https://github.com/jackbrower">GitHub</a>.
@@ -55,7 +55,38 @@
         </div>
         <div class="col-1-2">
           <div class="content">
-            <p><img src="./assets/img/foi.png"></p>
+            <p>
+              <figure>
+                <img src="./assets/img/foi.png">
+                <figcaption>
+                  <center><small><a href="https://github.com/jackbrower/foi">Source</a></small></center>
+                </figcaption>
+              </figure>
+            </p>
+          </div>
+        </div>
+      </div>
+      <center>
+        <h2>visualizer<sup>2</sup></h2>
+      </center>
+      <div class="grid">
+        <div class="col-1-2">
+          <div class="content">
+            <p style="padding:0px 20px 0px 0px; text-align:justify;">
+              A Python program that takes various Calculus equations and visualizes them with MatPlotLib. A user specifies the type of equation they want to visualize (e.g. Reimann sums) and then provides a relevant equation (e.g. x<sup>2</sup>), along with any other required data. The program then renders a visualization of the equation. 
+            </p>
+          </div>
+        </div>
+        <div class="col-1-2">
+          <div class="content">
+            <p>
+            <figure>
+              <img src="./assets/img/foi.png">
+              <figcaption>
+                <center><small><a href="https://github.com/jackbrower/visualizer2">Source</a></small></center>
+              </figcaption>
+            </figure>
+            </p>
           </div>
         </div>
       </div>
@@ -75,9 +106,16 @@
     </section>
     <section id="contact">
       <p>
+        Feel free to contact me at any time with any of the below links.
+      </p>
+      <p>
         ✉️ <a href="mailto:ejbrower4@gmail.com">ejbrower4@gmail.com</a>
         <br>
+        <i class="fa fa-linkedin" aria-hidden="true"></i><a href="https://linkedin.com/in/jack-brower">&nbsp;&nbsp;jack-brower</a>
+        <br>
         📱 (352) 339-0096
+        <br>
+        <i class="fa fa-github" aria-hidden="true"></i><a href="https://github.com/jackbrower">&nbsp;&nbsp;jackbrower</a>
       </p>
     </section>
   </body>
