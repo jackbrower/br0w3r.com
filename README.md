@@ -1,3 +1,3 @@
 ## brower.xyx
 
-Even more minimal, non-boilerplate version of my website
+Portfolio. Project hosts, if applicable, can be found on jackbrower.github.io
