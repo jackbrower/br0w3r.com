@@ -1,3 +1,3 @@
 ## brower.xyz
 
-Portfolio. Project hosts, if applicable, can be found on jackbrower.github.io
+Portfolio. Written to be minimal, but not useless.
