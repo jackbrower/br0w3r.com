@@ -60,7 +60,7 @@ a h1 {
   .cole-1-2:last-child {
     margin-left: 20px;
   }
-  img{
+  #showcase{
     width: 100%;
     height: auto;
     max-height: 300px;
