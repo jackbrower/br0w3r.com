@@ -1,0 +1,50 @@
+body
+{
+    background-color: black;
+    overflow: hidden;
+}
+
+main
+{
+    color: white;
+    font-family: monospace;
+}
+
+.container
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.line-break
+{
+    width: 100%;
+}  
+
+a:link
+{
+    color: white;
+    text-decoration: none;
+}
+  
+a:visited
+{
+  color: white;
+  text-decoration: none;
+}
+  
+a:hover
+{
+  color: white;
+  text-decoration: underline;
+}
+  
+a:active
+{
+  color: white;
+  text-decoration: underline;
+}
