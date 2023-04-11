@@ -6,7 +6,7 @@ body
 
 main
 {
-    color: white;
+    color: #00f10c;
     font-family: monospace;
 }
 
@@ -27,24 +27,24 @@ main
 
 a:link
 {
-    color: white;
+    color: #00f10c;
     text-decoration: none;
 }
   
 a:visited
 {
-  color: white;
+  color: #00f10c;
   text-decoration: none;
 }
   
 a:hover
 {
-  color: white;
+  color: #00f10c;
   text-decoration: underline;
 }
   
 a:active
 {
-  color: white;
+  color: #00f10c;
   text-decoration: underline;
 }
