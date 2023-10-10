@@ -9,7 +9,7 @@
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
   </head>
   <body>
-    <main class="container">
+    <main id ="main" class="container">
       <pre id="pgp-key">
    _            _      _                                
   (_)          | |    | |                               
@@ -20,13 +20,24 @@
  _/ |                                                   
 |__/
       </pre>
-      <p style="text-align: center; margin-top: 10">
+      <p style="text-align: center; margin-top: -20px">
         <a href="https://github.com/jackbrower">github</a> - <a href="mailto:jackbrower@duck.com">contact</a> - <a href="#" onclick="fetchPGPKey()">pgp key</a>
       </p>
     </main>
+    <main id="blog">
+      <p>blog here</p>blog here
+    </main>
+
     <script>
+      function setHeaderHeight() {
+        var mainheight = document.getElementById('main').clientHeight + "px";
+
+        document.getElementById('blog').style.marginTop = mainheight;
+      }
+
+      setHeaderHeight();
+
       function fetchPGPKey() {
-        // Replace the URL below with the actual URL of your PGP key file or API
         const pgpKeyUrl = './pgp_key.txt';
     
         fetch(pgpKeyUrl)
@@ -34,11 +45,11 @@
           .then(pgpKey => {
             const pgpKeyDiv = document.createElement('div');
             pgpKeyDiv.textContent = pgpKey;
-            pgpKeyDiv.style.maxWidth = '1000px'; // Set the max width to 1000 pixels
-            pgpKeyDiv.style.margin = '0 auto'; // Center the text
+            pgpKeyDiv.style.maxWidth = '1000px';
+            pgpKeyDiv.style.margin = '0 auto';
     
             const pgpKeyPre = document.getElementById('pgp-key');
-            pgpKeyPre.replaceWith(pgpKeyDiv); // Replace <pre> with <div> containing the PGP key
+            pgpKeyPre.replaceWith(pgpKeyDiv);
           })
           .catch(error => console.error('Error fetching PGP key:', error));
       }
