@@ -10,13 +10,6 @@ main
     font-family: monospace;
 }
 
-@media (max-width: 780px) {
-    main {
-        font-size: 11px;
-    }
-}
-
-
 .container
 {
     position: absolute;
@@ -28,10 +21,6 @@ main
 }
 
 div {
-    white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
     word-wrap: break-word;
 }
 
@@ -57,4 +46,52 @@ a:active
 {
   color: #00f10c;
   text-decoration: underline;
+}
+
+/* Blog section */
+#blog {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.blog-post {
+  display: flex;
+  padding: 10px;
+  border: none; 
+  background-color: transparent;
+  align-items: center;
+}
+
+.left-content {
+  flex: 0 0 100px;
+  margin-right: 10px;
+  border: 2px solid #00f10c;
+  padding: 0;
+  max-height: 200px;
+  align-items: center;
+}
+
+.right-content {
+  flex: 1;
+  align-items: center;
+}
+
+.post-title {
+  font-size: 24px;
+}
+
+.post-subtitle {
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.post-summary {
+  margin-top: 0;
+}
+
+@media (max-width: 480px) {
+    main {
+        font-size: 11px;
+    }
 }
