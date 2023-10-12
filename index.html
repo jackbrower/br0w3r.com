@@ -21,16 +21,16 @@
 |__/
       </pre>
       <p style="text-align: center; margin-top: -20px">
-        <a href="https://github.com/jackbrower">github</a> - <a href="mailto:jackbrower@duck.com">contact</a> - <a href="#" onclick="fetchPGPKey()">pgp key</a>
+        <a href="https://github.com/jackbrower">github</a> - <a href="mailto:jackbrower@duck.com">contact</a> - <a href="./pgp_key.txt">pgp key</a>
       </p>
     </main>
     <main id="blog">
       <div class="blog-post">
         <div class="left-content">
-          <img src="./images/ctf_blog_thumb.png" alt="Thumbnail, screenshot of Kali Linux" width="300" height="200">
+          <a href="posts/tutorial_ctf.html"><img src="./images/ctf_blog_thumb.png" alt="Thumbnail, screenshot of Kali Linux" width="300" height="200"></a>
         </div>
         <div class="right-content" style="margin-top: -10px">
-          <h2 class="post-title">Making a Tutorial CTF</h2>
+          <a href="posts/tutorial_ctf.html"><h2 class="post-title">Making a Tutorial CTF</h2></a>
           <p class="post-subtitle"><strong>An introduction of the cyber attack lifecycle</strong></p>
           <p class="post-date">10/10/2023</p>
           <p class="post-summary">
@@ -50,23 +50,6 @@
       }
 
       setHeaderHeight();
-
-      function fetchPGPKey() {
-        const pgpKeyUrl = './pgp_key.txt';
-    
-        fetch(pgpKeyUrl)
-          .then(response => response.text())
-          .then(pgpKey => {
-            const pgpKeyDiv = document.createElement('div');
-            pgpKeyDiv.textContent = pgpKey;
-            pgpKeyDiv.style.maxWidth = '1000px';
-            pgpKeyDiv.style.margin = '0 auto';
-    
-            const pgpKeyPre = document.getElementById('pgp-key');
-            pgpKeyPre.replaceWith(pgpKeyDiv);
-          })
-          .catch(error => console.error('Error fetching PGP key:', error));
-      }
     </script>
   </body>
 </html>
