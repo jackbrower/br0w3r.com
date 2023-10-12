@@ -62,11 +62,14 @@ a:active
   align-items: center;
 }
 
+img {
+  border: 2px solid #00f10c;
+  padding: 2px;
+}
+
 .left-content {
   flex: 0 0 100px;
   margin-right: 10px;
-  border: 2px solid #00f10c;
-  padding: 0;
   max-height: 200px;
   align-items: center;
 }
@@ -108,10 +111,10 @@ a:active
   }
 
   .left-content {
-    margin-right: 0;
-    border: 2px solid #00f10c;
-    padding: 0;
     max-height: 200px;
+    margin-bottom: 25px;
+    display: inline-block;
+    justify-content: center;
   }
 
   .right-content {
