@@ -95,26 +95,26 @@ a:active
   }
 
   #blog {
-    max-width: 100%; /* Make it full-width for mobile */
-    margin: 0; /* Remove auto margin for centering */
-    text-align: justify; /* Adjust text alignment for better readability */
+    max-width: 100%;
+    margin: 0;
+    text-align: justify;
   }
 
   .blog-post {
-    display: block; /* Change to block for top-down layout */
+    display: block; 
     padding: 10px;
     border: none;
     background-color: transparent;
   }
 
   .left-content {
-    margin-right: 0; /* Remove right margin for full-width */
+    margin-right: 0;
     border: 2px solid #00f10c;
     padding: 0;
     max-height: 200px;
   }
 
   .right-content {
-    margin-top: 10px; /* Add top margin for spacing between blog posts */
+    margin-top: 10px;
   }
 }
