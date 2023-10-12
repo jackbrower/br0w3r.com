@@ -90,7 +90,31 @@ a:active
 }
 
 @media (max-width: 480px) {
-    main {
-        font-size: 11px;
-    }
+  main {
+    font-size: 11px;
+  }
+
+  #blog {
+    max-width: 100%; /* Make it full-width for mobile */
+    margin: 0; /* Remove auto margin for centering */
+    text-align: justify; /* Adjust text alignment for better readability */
+  }
+
+  .blog-post {
+    display: block; /* Change to block for top-down layout */
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+  }
+
+  .left-content {
+    margin-right: 0; /* Remove right margin for full-width */
+    border: 2px solid #00f10c;
+    padding: 0;
+    max-height: 200px;
+  }
+
+  .right-content {
+    margin-top: 10px; /* Add top margin for spacing between blog posts */
+  }
 }
