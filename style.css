@@ -1,32 +1,48 @@
 body
 {
-    background-color: black;
+  background-color: black;
+  overflow-y: scroll;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 main
 {
-    color: #00f10c;
-    font-family: monospace;
+  color: #00f10c;
+  font-family: monospace;
 }
 
 .container
 {
-    position: absolute;
-    top: 1%;
-    left: 50%;
-    -moz-transform: translateX(-50%) translateY(-10%);
-    -webkit-transform: translateX(-50%) translateY(-10%);
-    transform: translateX(-50%) translateY(-10%);
+  position: absolute;
+  top: 1%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-10%);
+  -webkit-transform: translateX(-50%) translateY(-10%);
+  transform: translateX(-50%) translateY(-10%);
+}
+
+.header-link:hover
+{
+  font-weight: bold;
+  text-decoration: none;
 }
 
 div {
-    word-wrap: break-word;
+  word-wrap: break-word;
 }
 
 a:link
 {
-    color: #00f10c;
-    text-decoration: none;
+  color: #00f10c;
+  text-decoration: none;
 }
   
 a:visited
