@@ -15,8 +15,8 @@ html {
 
 main
 {
-  color: #00f10c;
-  font-family: monospace;
+  color: #5cf463;
+  font-family: 'Inconsolata';
 }
 
 .container
@@ -41,25 +41,25 @@ div {
 
 a:link
 {
-  color: #00f10c;
+  color: #5cf463;
   text-decoration: none;
 }
   
 a:visited
 {
-  color: #00f10c;
+  color: #5cf463;
   text-decoration: none;
 }
   
 a:hover
 {
-  color: #00f10c;
+  color: #5cf463;
   text-decoration: underline;
 }
   
 a:active
 {
-  color: #00f10c;
+  color: #5cf463;
   text-decoration: underline;
 }
 
@@ -79,7 +79,7 @@ a:active
 }
 
 img {
-  border: 2px solid #00f10c;
+  border: 2px solid #5cf463;
   padding: 2px;
 }
 
