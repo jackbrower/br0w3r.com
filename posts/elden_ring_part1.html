@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>brower.xyz</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Inconsolata" />
+  </head>
+  <body>
+    <main id ="main" class="container">
+    <pre id="pgp-key"><a class="header-link" href="..">
+   _            _      _                                
+  (_)          | |    | |                               
+   _  __ _  ___| | __ | |__  _ __ _____      _____ _ __ 
+  | |/ _` |/ __| |/ / | '_ \| '__/ _ \ \ /\ / / _ \ '__|
+  | | (_| | (__|   <  | |_) | | | (_) \ V  V /  __/ |   
+  | |\__,_|\___|_|\_\ |_.__/|_|  \___/ \_/\_/ \___|_|   
+ _/ |                                                   
+|__/
+      </pre></a>
+      <p style="text-align: center; margin-top: -20px">
+        <a href="https://github.com/jackbrower">github</a> - <a href="mailto:jackbrower@duck.com">contact</a> - <a href="../pgp_key.txt">pgp key</a>
+      </p>
+    </main>
+    <main id="blog">
+        <h1>Reverse Engineering Elden Ring's Network Protocol (Part 1)</h1>
+        <h2>Decrypting messages from the client</h2>
+        <p>
+          Little public knowledge exists regarding Elden Ring's network protocol. This blog series seeks to uncover and make available the methods that
+          FromSoftware employed to implement network functionality into their game.
+          
+          This part will discuss how to decrypt the messages sent by the client.
+        </p>
+        
+        <!--
+        <br />
+        <h2>TL;DR</h2>
+        <p>
+            PUT SUMMARY HERE
+        </p>
+        <br />
+        -->
+        
+        <h2>Attempting to capture data from Elden Ring</h2>
+        <p>
+            We begin this process knowing nothing about how Elden Ring communicates over the network. Before we begin to capture packets for analysis,
+            we must first know over which port elden_ring.exe sends relevant data. Using
+            <a href="https://www.microsoft.com/en-us/download/details.aspx?id=4865">Microsoft's Network Monitor</a>, we can identify where data is being sent.
+        </p>
+        <center>
+            <a href="../images/edp1_netmon.png"><img src="../images/edp1_netmon.png" alt="Screenshot of Windows Network Monitor" width="100%" style="border: 2px solid #5cf463; padding: 2px;"></a>
+        </center>
+        <p>
+            Note that the Elden Ring sends data over port <strong>51306</strong>. We can use Wireshark to capture all packets on this port. However, a cursory glance of the packet data won't reveal any readable info,
+            indicating that FromSoftware is encrypting data that is sent to the server.
+        </p>
+        <center>
+          <a href="../images/edp1_wireshark.png"><img src="../images/edp1_wireshark.png" alt="Screenshot of Wireshark capturing port 51306" width="100%" style="border: 2px solid #5cf463; padding: 2px;"></a>
+        </center>
+        <p>
+          If data is being encrypted from the client, there must be a local encryption key stored somewhere within the Elden Ring game files. So before we do any packet capturing, we need to locate where this
+          encryption key may be stored, and what protocol is being used to obfuscate the data.
+        </p>
+
+        <br />
+
+        <h2>Locating encryption keys</h2>
+        <p>
+          I've made the assumption that Elden Ring netcode is similar to Dark Souls III netcode, in that they both use OpenSSL to communicate. If this is true, then the Elden Ring binary should have markers
+          indicating that it was uses OpenSSL. We can use Ghidra to decompile Elden Ring, and search for these markers. An initial string search confirms this assumption.
+        </p>
+        <center>
+          <a href="../images/edp1_stringsearch1.png"><img src="../images/edp1_stringsearch1.png" width="100%" style="border: 2px solid #5cf463; padding: 2px;"></a>
+        </center>
+        <p>
+            Another search for the "KEY" keyword reveals some public keys embedded within the binary, but nothing relevant.
+        </p>
+        <center>
+          <a href="../images/edp1_stringsearch2.png"><img src="../images/edp1_stringsearch2.png" width="100%" style="border: 2px solid #5cf463; padding: 2px;"></a>
+        </center>
+        <p>
+          Poking around the binary a bit more, including searching for the "PRIVATE" keyword, reveals more OpenSSL boilterplate.
+        </p>
+        <center>
+          <a href="../images/edp1_privatekeys.png"><img src="../images/edp1_privatekeys.png" width="100%" style="border: 2px solid #5cf463; padding: 2px;"></a>
+          &nbsp;
+          <a href="../images/edp1_keyimplementation.png"><img src="../images/edp1_keyimplementation.png" width="100%" style="border: 2px solid #5cf463; padding: 2px;"></a>
+        </center>
+        <p>
+          Given that we are unable to find the encryption key in plaintext, I put a breakpoint at the OpenSSL key implementation function (above) and run the binary.
+          This will hopefuly allow us trace however Elden Ring passes its keys into OpenSSL. Firstly, the above function was identified as OpenSSL's "pem_read_bio_key_decoder",
+          so I'll rename the function symbol to that to make it easier to search for in the debugger
+        </p>
+        
+        <h2>WIP</h2>
+    </main>
+
+    <script>
+      function setHeaderHeight() {
+        var mainheight = document.getElementById('main').clientHeight + "px";
+
+        document.getElementById('blog').style.marginTop = mainheight;
+      }
+
+      setHeaderHeight();
+    </script>
+  </body>
+</html>
