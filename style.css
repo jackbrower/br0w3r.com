@@ -1,11 +1,15 @@
-body
-{
+body {
   background-color: black;
   overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 html::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 html {
@@ -13,24 +17,19 @@ html {
   -ms-overflow-style: none;
 }
 
-main
-{
+main {
   color: #5cf463;
   font-family: 'Inconsolata';
+  text-align: center;
+  margin-top: -50px;
 }
 
-.container
-{
-  position: absolute;
-  top: 1%;
-  left: 50%;
-  -moz-transform: translateX(-50%) translateY(-10%);
-  -webkit-transform: translateX(-50%) translateY(-10%);
-  transform: translateX(-50%) translateY(-10%);
+pre {
+  white-space: pre-wrap;
+  font-size: 16px;
 }
 
-.header-link:hover
-{
+.header-link:hover {
   font-weight: bold;
   text-decoration: none;
 }
@@ -39,101 +38,28 @@ div {
   word-wrap: break-word;
 }
 
-a:link
-{
+a:link {
   color: #5cf463;
   text-decoration: none;
 }
-  
-a:visited
-{
+
+a:visited {
   color: #5cf463;
   text-decoration: none;
 }
-  
-a:hover
-{
-  color: #5cf463;
-  text-decoration: underline;
-}
-  
-a:active
-{
+
+a:hover {
   color: #5cf463;
   text-decoration: underline;
 }
 
-/* Blog section */
-#blog {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: justify;
-}
-
-.blog-post {
-  display: flex;
-  padding: 10px;
-  border: none; 
-  background-color: transparent;
-  align-items: center;
-}
-
-img {
-  border: 2px solid #5cf463;
-  padding: 2px;
-}
-
-.left-content {
-  flex: 0 0 100px;
-  margin-right: 10px;
-  max-height: 200px;
-  align-items: center;
-}
-
-.right-content {
-  flex: 1;
-  align-items: center;
-}
-
-.post-title {
-  font-size: 24px;
-}
-
-.post-subtitle {
-  font-weight: bold;
-  margin-top: 0;
-}
-
-.post-summary {
-  margin-top: 0;
+a:active {
+  color: #5cf463;
+  text-decoration: underline;
 }
 
 @media (max-width: 480px) {
-  main {
-    font-size: 11px;
-  }
-
-  #blog {
-    max-width: 100%;
-    margin: 0;
-    text-align: justify;
-  }
-
-  .blog-post {
-    display: block; 
-    padding: 10px;
-    border: none;
-    background-color: transparent;
-  }
-
-  .left-content {
-    max-height: 200px;
-    margin-bottom: 25px;
-    display: inline-block;
-    justify-content: center;
-  }
-
-  .right-content {
-    margin-top: 10px;
+  pre {
+    font-size: 2.5vw;
   }
 }

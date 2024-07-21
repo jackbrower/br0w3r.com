@@ -10,8 +10,8 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Inconsolata" />
   </head>
   <body>
-    <main id ="main" class="container">
-      <pre id="pgp-key"><a class="header-link" href="..">
+    <main id="main" class="container">
+      <pre>
    _            _      _                                
   (_)          | |    | |                               
    _  __ _  ___| | __ | |__  _ __ _____      _____ _ __ 
@@ -19,53 +19,12 @@
   | | (_| | (__|   <  | |_) | | | (_) \ V  V /  __/ |   
   | |\__,_|\___|_|\_\ |_.__/|_|  \___/ \_/\_/ \___|_|   
  _/ |                                                   
-|__/
-      </pre></a>
+|__/                                                    
+     
+</pre>
       <p style="text-align: center; margin-top: -20px">
         <a href="https://github.com/jackbrower">github</a> - <a href="mailto:jackbrower@duck.com">contact</a> - <a href="./pgp_key.txt">pgp key</a>
       </p>
     </main>
-    <main id="blog">
-      <div class="blog-post">
-        <div class="left-content">
-          <a href="posts/tutorial_ctf.html"><img src="./images/edp1_thumbnail.PNG" alt="Thumbnail, screenshot of Kali Linux" width="300" height="200"></a>
-        </div>
-        <div class="right-content" style="margin-top: -10px">
-          <a href="posts/elden_ring_part1.html"><h2 class="post-title">Reverse Engineering Elden Ring's Network Protocol (Part 1)</h2></a>
-          <p class="post-subtitle"><strong>Decrypting messages from the client</strong></p>
-          <p class="post-date">11/4/2023</p>
-          <p class="post-summary">
-            Little public knowledge exists regarding Elden Ring's network protocol. This blog series seeks to uncover and make available the methods that
-            FromSoftware employed to implement network functionality into their game.
-          </p>
-        </div>
-      </div>
-      <!-- TODO: Replace this blog post -->
-      <div class="blog-post">
-        <div class="left-content">
-          <a href="posts/tutorial_ctf.html"><img src="./images/ctf_blog_thumb.png" alt="Thumbnail, screenshot of Kali Linux" width="300" height="200"></a>
-        </div>
-        <div class="right-content" style="margin-top: -10px">
-          <a href="posts/tutorial_ctf.html"><h2 class="post-title">Making a Tutorial CTF</h2></a>
-          <p class="post-subtitle"><strong>An introduction of the cyber attack lifecycle</strong></p>
-          <p class="post-date">10/10/2023</p>
-          <p class="post-summary">
-            As part of an on-campus club, I wrote a presentation as an introduction to cyber attacks and offensive tools.
-            Along with the presentation, I set up various remote servers for players to hack into, upload a remote payload, and then persistantly access
-            from a C2 server.
-          </p>
-        </div>
-      </div>
-    </main>
-
-    <script>
-      function setHeaderHeight() {
-        var mainheight = document.getElementById('main').clientHeight + "px";
-
-        document.getElementById('blog').style.marginTop = mainheight;
-      }
-
-      setHeaderHeight();
-    </script>
   </body>
 </html>
